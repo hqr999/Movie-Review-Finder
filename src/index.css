@@ -22,3 +22,12 @@ h3{
   color: #f3f3f3;
   text-align: center;
 }
+
+.card-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  max-width: 1024px;
+  margin: 0 auto;
+}

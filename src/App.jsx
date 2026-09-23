@@ -5,19 +5,24 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 
 
-const Card = ({title,rating,isCool}) => {
+const Card = ({title}) => {
   return(
-    <div>
+    <div style={{
+      border: '1px solid #4b5362',
+      padding: '20px',
+      margin: '10px',
+      backgroundColor: '#31363f',
+      borderRadius: '10px',
+      minHeight: '100px',
+    }}>
       <h2>{title}</h2>
-      <h3>{rating}</h3>
     </div>
   )
 }
 
 const App = () => {
   return(
-    <div>
-     <h2>Functional arrow component</h2>
+    <div className='card-container'>
       <Card title="Star Wars" rating={5} />
       <Card title="Avatar" rating={4}/>
     </div>
