@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Buscar from "./componentes/Buscar";
+import Spinner from "./componentes/Spinner";
 
 const API_URL = "https://api.themoviedb.org/3";
 
@@ -61,16 +62,18 @@ const App = () => {
           <Buscar termoBusca={termoBusca} setTermoBusca={setTermoBusca} />
         </header>
         <section className="all-movies">
-          <h2>Todos os filmes</h2>
+          <h2 className="mt-{25px}">Todos os filmes</h2>
 
           {isLoading ? (
-            <p className="text-white">Carregando...</p>
+            <Spinner />
           ) : errMsg ? (
             <p className="text-red-600">{errMsg}</p>
           ) : (
             <ul>
               {filmesLista.map((filme) => (
-                <p className="text-white">{filme.title}</p>
+                <p key={filme.id} className="text-white">
+                  {filme.title}
+                </p>
               ))}
             </ul>
           )}
