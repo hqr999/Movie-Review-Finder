@@ -30,13 +30,13 @@ Uma aplicação React para descobrir filmes populares e buscar entre milhares de
 
 ## 🛠️ Tecnologias
 
-| Tecnologia | Uso |
-| --- | --- |
-| [React 19](https://react.dev/) | Interface e gerenciamento de estado com hooks |
-| [Vite](https://vitejs.dev/) | Servidor de desenvolvimento e build |
-| [Tailwind CSS 4](https://tailwindcss.com/) | Estilização (via plugin `@tailwindcss/vite`) |
-| [react-use](https://github.com/streamich/react-use) | Hook `useDebounce` para otimizar a busca |
-| [TMDB API](https://developer.themoviedb.org/docs) | Fonte dos dados de filmes |
+| Tecnologia                                          | Uso                                           |
+| --------------------------------------------------- | --------------------------------------------- |
+| [React 19](https://react.dev/)                      | Interface e gerenciamento de estado com hooks |
+| [Vite](https://vitejs.dev/)                         | Servidor de desenvolvimento e build           |
+| [Tailwind CSS 4](https://tailwindcss.com/)          | Estilização (via plugin `@tailwindcss/vite`)  |
+| [react-use](https://github.com/streamich/react-use) | Hook `useDebounce` para otimizar a busca      |
+| [TMDB API](https://developer.themoviedb.org/docs)   | Fonte dos dados de filmes                     |
 
 ## 💡 Destaques técnicos
 
@@ -99,12 +99,12 @@ Acesse `http://localhost:5173` no navegador.
 
 ### Scripts disponíveis
 
-| Comando | Descrição |
-| --- | --- |
-| `npm run dev` | Inicia o servidor de desenvolvimento |
-| `npm run build` | Gera o build de produção em `dist/` |
+| Comando           | Descrição                            |
+| ----------------- | ------------------------------------ |
+| `npm run dev`     | Inicia o servidor de desenvolvimento |
+| `npm run build`   | Gera o build de produção em `dist/`  |
 | `npm run preview` | Serve o build de produção localmente |
-| `npm run lint` | Roda o ESLint |
+| `npm run lint`    | Roda o ESLint                        |
 
 ## 📁 Estrutura do projeto
 
@@ -124,7 +124,6 @@ src/
 - [ ] Página de detalhes do filme (sinopse, elenco, trailer)
 - [ ] Paginação / scroll infinito
 - [ ] Seção de "buscas em alta"
-- [ ] Deploy (Vercel / Netlify)
 
 ## 🙏 Créditos
 
