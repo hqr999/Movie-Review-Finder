@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Buscar from "./componentes/Buscar";
 import Spinner from "./componentes/Spinner";
 import MovieCard from "./componentes/MovieCard";
+import { useDebounce } from "react-use";
 
 const API_URL = "https://api.themoviedb.org/3";
 
@@ -19,6 +20,11 @@ const App = () => {
   const [errMsg, setErrMsg] = useState("");
   const [filmesLista, setFilmesLista] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
+  const [debounceTermoBusca, setDebounceTermoBusca] = useState("");
+
+  // Debounce o termo de busca para previnir que se faça muitas chamadas de API.
+  // Como ? Fazendo com que se espere pelo menos 500ms até o usuário parar de digitar.
+  useDebounce(() => setDebounceTermoBusca(termoBusca), 500, [termoBusca]);
 
   const fetch_movies = async (query = "") => {
     setIsLoading(true);
@@ -50,8 +56,8 @@ const App = () => {
   };
 
   useEffect(() => {
-    fetch_movies(termoBusca);
-  }, [termoBusca]);
+    fetch_movies(debounceTermoBusca);
+  }, [debounceTermoBusca]);
 
   return (
     <main>
